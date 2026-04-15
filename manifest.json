@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "CRM Memory Copilot",
+  "version": "2.3.0",
+  "description": "AI-powered CRM memory copilot for eLead",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://www.eleadcrm.com/*",
+    "https://api.groq.com/*"
+  ],
+  "action": {
+    "default_title": "CRM Memory Copilot"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.eleadcrm.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

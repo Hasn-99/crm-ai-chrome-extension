@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRM Memory Copilot</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+
+    <div class="header">
+      <div class="header-title">
+        <span class="header-icon">🚗</span>
+        <div>
+          <h1>CRM Memory Copilot</h1>
+          <p>AI follow-up assistant · Honda CRM</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="clearCurrentCustomer" class="icon-btn" title="Clear current customer">✕</button>
+        <button id="refreshData" class="refresh-btn" title="Refresh from page">↻</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>👤 Detected Customer</h2>
+        <span id="customerBadge" class="badge"></span>
+      </div>
+      <div id="customerBlock" class="mono-block">Loading customer...</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>🧠 Unified Memory</h2>
+        <button id="toggleTimeline" class="link-btn">View History</button>
+      </div>
+      <div id="memoryBlock" class="mono-block">Checking history...</div>
+      <div id="profileBlock" class="mono-block" style="margin-top:8px"></div>
+      <div id="timelineBlock" class="timeline hidden"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>📋 Quick Update</h2>
+      </div>
+      <div class="interaction-row">
+        <select id="interactionType">
+          <option value="visit_inperson">🏢 In-Person Visit</option>
+          <option value="visit_phone">📞 Phone Call</option>
+          <option value="email">Write Email</option>
+          <option value="sms">Write Text/SMS</option>
+          <option value="note">📝 Internal Note</option>
+          <option value="lead">🎯 Lead / Internet</option>
+        </select>
+      </div>
+      <div class="interaction-row">
+        <select id="currentStatus">
+          <option value="">Current Status (optional)</option>
+          <option value="new_lead">New Lead</option>
+          <option value="working">Working</option>
+          <option value="engaged">Engaged</option>
+          <option value="visited">Visited / Test Drove</option>
+          <option value="appointment_pending">Coming Back / Appointment Set</option>
+          <option value="follow_up_needed">Follow Up Needed</option>
+          <option value="sold">Sold</option>
+          <option value="lost">Lost</option>
+        </select>
+      </div>
+      <textarea id="interactionNotes" placeholder="Write the latest update here. Example: Customer came in, looked at Civic Sport, liked it, asked about payment, said he may come back Saturday with his wife."></textarea>
+      <button id="logInteraction" class="btn-secondary">💾 Save Update to Memory</button>
+      <div class="small-help">Use one box only. Save the newest update here, and the copilot will use it in the next analysis and follow-up.</div>
+    </div>
+
+    <div class="card compact">
+      <h2>🔑 Groq API Key</h2>
+      <input id="apiKey" type="password" placeholder="Paste your Groq API key" />
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>🤖 AI Writer From Your Request</h2>
+      </div>
+      <textarea id="instruction" placeholder="Tell the AI exactly what you want written right now. Example: Write a short text saying I followed up after his visit today and ask if Saturday still works. The copilot will use the current customer memory in the background."></textarea>
+      <div class="btn-grid">
+        <button id="generateEmail" class="btn-primary">Write Email</button>
+        <button id="generateText" class="btn-primary">Write Text</button>
+        <button id="generateNote" class="btn-primary">Write Note</button>
+        <button id="analyzeBtn" class="btn-analyst">Analyze & Next Step</button>
+      </div>
+    </div>
+
+    <div class="card" id="outputCard">
+      <div class="card-header">
+        <h2 id="outputLabel">Generated Output</h2>
+        <span id="outputTypeBadge" class="badge badge-blue"></span>
+      </div>
+      <div id="analysisOutput" class="analysis-output hidden"></div>
+      <textarea id="output" placeholder="AI output will appear here..."></textarea>
+      <div class="row">
+        <button id="saveMessage" class="btn-save">💾 Save</button>
+        <button id="copyMessage" class="btn-copy">📋 Copy</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
