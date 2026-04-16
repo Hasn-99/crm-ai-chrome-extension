@@ -93,7 +93,7 @@ The goal is simple:
 ## ⚠️ Requirements & Notes
 
 - This tool requires a **Groq API key** to function  
-- The API key must be entered directly داخل واجهة التطبيق (UI)  
+- The API key must be entered directly (UI)  
 - No API keys or sensitive data are stored in the source code  
 
 ---
