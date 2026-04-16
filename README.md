@@ -124,7 +124,7 @@ This tool demonstrates how AI and automation can:
 ## 📸 Screenshots
 
 ### A – Access from Any CRM Tab
-![A](A.png)
+![A](A-Floating Button (Access).png)
 
 Accessible from any CDK CRM tab via the floating action button (circle), ensuring consistent use even when popups replace the toolbar.
 
