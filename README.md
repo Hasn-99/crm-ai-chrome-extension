@@ -124,23 +124,17 @@ This tool demonstrates how AI and automation can:
 ## 📸 Screenshots
 
 ### A – Access from Any CRM Tab
-![A](A-Floating Button (Access).png)
-
-Accessible from any CDK CRM tab via the floating action button (circle), ensuring consistent use even when popups replace the toolbar.
+![A](A-Floating%20Button%20%28Access%29.png)
 
 ---
 
 ### B – Automatic Data Extraction
-![B](B.png)
-
-Clicking the floating button opens a popup that automatically extracts customer information from the CRM and displays it in a structured view.
+![B](B-Popup%20%2B%20Data%20Extraction.png)
 
 ---
 
 ### C – Unified Customer Interface
-![C](C.png)
-
-The upper interface presents structured customer data along with a unified memory system that tracks history, status, and key insights.
+![C](C-Interface%20%28Memory%20%2B%20System%29.png)
 ## 👤 Author
 
 **Hasn Hameed**
