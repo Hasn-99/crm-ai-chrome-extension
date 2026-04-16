@@ -121,7 +121,26 @@ This tool demonstrates how AI and automation can:
 - Enable faster decision-making  
 
 ---
+## 📸 Screenshots
 
+### A – Access from Any CRM Tab
+![A](A.png)
+
+Accessible from any CDK CRM tab via the floating action button (circle), ensuring consistent use even when popups replace the toolbar.
+
+---
+
+### B – Automatic Data Extraction
+![B](B.png)
+
+Clicking the floating button opens a popup that automatically extracts customer information from the CRM and displays it in a structured view.
+
+---
+
+### C – Unified Customer Interface
+![C](C.png)
+
+The upper interface presents structured customer data along with a unified memory system that tracks history, status, and key insights.
 ## 👤 Author
 
 **Hasn Hameed**
